@@ -14,8 +14,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IRepo, MysqlRepo>();
 
-String _connectionstring = builder.Configuration["ConnectionStrings:DefaultConnection"];
-
+String _connectionstring = "server=localhost:3306;database=bilist;user=bilist_user;password=bilist_pass;";
+Console.WriteLine(_connectionstring);
 builder.Services.AddDbContext<BiListContext>(opt => opt.UseMySql(_connectionstring, ServerVersion.AutoDetect(_connectionstring)));
 
 var app = builder.Build();

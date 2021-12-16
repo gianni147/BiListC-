@@ -1,10 +1,7 @@
-using System;
-
-namespace ASPNET.Models
+namespace ASPNET.dto
 {
-    public class BiList
+    public class BiListWriteDto
     {
-        public int Id { get; set; }
         public String Name { get; set; }
         public String Date { get; set; }
         public String Idea { get; set; }

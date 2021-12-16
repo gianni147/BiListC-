@@ -4,8 +4,15 @@ namespace ASPNET.Repositories
 {
     public interface IRepo
     {
-        IEnumerable<BiList> GetAllBiLists();
-
+        IEnumerable<BiList> GetAllBiList();
         BiList GetBiListById(int id);
+
+        void AddBiList(BiList t);
+
+        void UpdateBiList(BiList t);
+
+        void DeleteBiList(BiList t);
+
+        void SaveChanges();
     }
 }
